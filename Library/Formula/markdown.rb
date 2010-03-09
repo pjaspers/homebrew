@@ -5,10 +5,7 @@ class Markdown <Formula
   homepage 'http://daringfireball.net/projects/markdown/'
   md5 'f17b3c2b2830c6fd2fe0098226e59a2f'
 
-# depends_on 'cmake'
-
   def install
-    FileUtils.mv 'markdown.pl','markdown'
-    bin.install('markdown')
+    bin.install 'Markdown.pl' => 'markdown'
   end
 end
