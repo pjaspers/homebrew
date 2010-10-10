@@ -18,6 +18,14 @@ class Emacs <Formula
     ]
   end
 
+  def patches
+    # Adding Cocoa Emacs fullscreen support.
+    # "Probably the best fullscreen patch in the world."
+    #
+    # Adds the `ns-toggle-fullscreen` function to emacs
+    "http://github.com/downloads/typester/emacs/feature-fullscreen.patch"
+  end
+
   def caveats
     s = ""
     if ARGV.include? "--cocoa"
